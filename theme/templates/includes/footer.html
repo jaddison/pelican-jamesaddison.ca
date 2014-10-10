@@ -1,0 +1,35 @@
+<footer>
+    <div class="container small text-muted text-center">
+        <hr>
+        <p>
+            <a href="{{ SITEURL }}/newsletter/"><i class="fa fa-envelope"></i><span class="icon-label">My Newsletter</span></a>
+            &nbsp;&middot;&middot;&nbsp;
+            <a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives/') }}"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a>
+        </p>
+        {% if SOCIAL %}
+            <p>
+                Follow me on &nbsp;&middot;&middot;&nbsp;
+                {% for name, link in SOCIAL %}
+                    {% set name_sanitized = name|lower|replace('+','-plus')|replace(' ','-') %}
+                    {% if name_sanitized in ['flickr', 'spotify', 'stack-overflow'] %}
+                        {% set iconattributes = '"fa fa-' ~ name_sanitized ~ ' fa-lg"' %}
+                    {% else %}
+                        {% set iconattributes = '"fa fa-' ~ name_sanitized ~ '-square fa-lg"' %}
+                    {% endif %}
+                    {% if not loop.first %}&nbsp;&middot;&middot;&nbsp;{% endif %} <i class={{ iconattributes }}></i> <a href="{{ link }}">{{ name }}</a>
+                {% endfor %}
+            </p>
+        {% endif %}
+{#        {% if articles %}#}
+{#            {% set copy_date = articles[0].date.strftime('%Y') %}#}
+{#        {% else %}#}
+{#            {% set copy_date = '' %}#}
+{#        {% endif %}#}
+{#        &copy; {{ copy_date }} <a href='{{ SITEURL }}'>{{ AUTHOR }}</a>#}
+{#        {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}#}
+{#            {% from 'includes/cc-license.html' import cc_license_mark %}#}
+{#            <p>{{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}</p>#}
+{#        {% endif %}#}
+    </div>
+    <br>
+</footer>
