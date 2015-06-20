@@ -58,7 +58,7 @@ The 25Mbps/50Mbps mixup may have been caused on either Juce's or Shaw's end, whe
 
 Overall, even through the difficulties I've encountered, I'm impressed with how Juce - a small and young company - has performed. I truly hope that they aren't squashed by the [incumbents' political moves (trying to price out "last mile" resellers)](https://cartt.ca/article/shaws-proposed-wholesale-broadband-rates-just-unreasonable-independent-isps-argue). You should read that article.
 
-At the time of this writing, it's only been a few hours since I've switched over. I'll come back and update this post with anything further, particularly when I finally hop up to the 50Mbps tier.
+**Edit, June 20th**: My modem has been reconfigured with 50Mbps. Initial speed tests show 58Mbps down, 3.5Mbps up - solid performance overall. Although the faster speeds are nice, I doubt my usage patterns require it so I'll likely drop down to the 25Mbps plan in a few days to save some cash.
 
 ##### Notes
 
