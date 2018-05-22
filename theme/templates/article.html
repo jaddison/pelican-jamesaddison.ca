@@ -84,19 +84,7 @@
                 <p class="h6 text-muted">If you liked this post, please share it.</p>
                 <p class="btn-social-shares">
                     <a href="https://twitter.com/intent/tweet?via=jamesaddison&related=jamesaddison&url={{ SITEURL }}/{{ article.url }}&text={{ article.title }}" title="Share on Twitter" target="_blank" class="btn btn-sm btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}/{{ article.url }}" title="Share on Facebook" target="_blank" class="btn btn-sm btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
-                    <a href="https://plus.google.com/share?url={{ SITEURL }}/{{ article.url }}" title="Share on Google+" target="_blank" class="btn btn-sm btn-googleplus"><i class="fa fa-google-plus"></i> Google+</a>
-                    <a href="http://www.stumbleupon.com/submit?url={{ SITEURL }}/{{ article.url }}" title="Share on StumbleUpon" target="_blank" data-placement="top" class="btn btn-sm btn-stumbleupon"><i class="fa fa-stumbleupon"></i> Stumbleupon</a>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}/{{ article.url }}&title={{ article.title }}&summary={{ article.summary|striptags }}" title="Share on LinkedIn" target="_blank" class="btn btn-sm btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
                 </p>
-                <div class="row text-center">
-                    <div class="col-sm-6 col-sm-offset-1">
-                        <p class="h6 text-muted">I send out interesting posts to my newsletter subscribers.</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="h6"><a class='btn btn-sm btn-danger' href="/newsletter/"><i class="fa fa-envelope"></i> Subscribe now.</a></p>
-                    </div>
-                </div>
             </div>
             <!-- /.entry-content -->
             {% include 'includes/related-posts.html' %}

@@ -9,6 +9,6 @@ I’m using [Scrivener](http://www.literatureandlatte.com/scrivener.php) as my b
 
 This blog runs on [Python-based software called Pelican](http://getpelican.com) and is currently hosted on [Github](https://github.com/). This setup is not for the non-techie. The design is intentionally kept simple in an effort to keep focus on the content. Perhaps this will encourage me to publish quality posts!
 
-So, with this post and this new site, I’m challenging myself to write every day. They won’t always be published posts, but snippets at the very least. I’m planning to keep this blog focused on startups and related topics, so if that’s your bag [sign up for my newsletter](/newsletter/) to keep updated.
+So, with this post and this new site, I’m challenging myself to write every day. They won’t always be published posts, but snippets at the very least. I’m planning to keep this blog focused on startups and related topics.
 
 I’m optimistic: let’s see where it goes from here.
