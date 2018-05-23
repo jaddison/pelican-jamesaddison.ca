@@ -13,3 +13,4 @@ output
 *.iws
 cache/
 output/
+node_modules/

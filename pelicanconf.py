@@ -1,19 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+import os
 
 DEFAULT_LANG = u'en'
 TIMEZONE = 'America/Vancouver'
 
 AUTHOR = u'James Addison'
 SITENAME = u'James Addison'
-SITEURL = 'http://jamesaddison.ca'
+SITEURL = 'https://jamesaddison.ca'
 
 PATH = 'content'
 OUTPUT_RETENTION = ('.git', 'CNAME')
 
-DEFAULT_PAGINATION = 10
-SUMMARY_MAX_LENGTH = 20
+DEFAULT_PAGINATION = 5
+SUMMARY_MAX_LENGTH = 100
 
 ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
@@ -52,10 +52,23 @@ SOCIAL = (
 )
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = AUTHOR_FEED_RSS = None
+FEED_DOMAIN = SITEURL
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
+
+DISQUS_SITENAME = "jamesaddison"
+DISQUS_DISPLAY_COUNTS = True
+GOOGLE_ANALYTICS_UNIVERSAL = 'UA-69700-6'
+GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'auto'
+
+PLUGIN_PATHS = ['../pelican-plugins']
+PLUGINS = ['assets']
+
+ASSET_CONFIG = (('LESS_BIN', os.path.join(os.path.dirname(os.path.realpath(__file__)), 'node_modules/less/bin/lessc')), )
+
+DELETE_OUTPUT_DIRECTORY = True

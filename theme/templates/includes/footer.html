@@ -6,7 +6,6 @@
         </p>
         {% if SOCIAL %}
             <p>
-                Follow me on &nbsp;&middot;&middot;&nbsp;
                 {% for name, link in SOCIAL %}
                     {% set name_sanitized = name|lower|replace('+','-plus')|replace(' ','-') %}
                     {% if name_sanitized in ['flickr', 'spotify', 'stack-overflow'] %}
@@ -14,7 +13,7 @@
                     {% else %}
                         {% set iconattributes = '"fa fa-' ~ name_sanitized ~ '-square fa-lg"' %}
                     {% endif %}
-                    {% if not loop.first %}&nbsp;&middot;&middot;&nbsp;{% endif %} <i class={{ iconattributes }}></i> <a href="{{ link }}">{{ name }}</a>
+                    {% if not loop.first %}&nbsp;-&nbsp;{% endif %} <a href="{{ link }}"><i class={{ iconattributes }}></i> &nbsp;{{ name }}</a>
                 {% endfor %}
             </p>
         {% endif %}

@@ -55,8 +55,12 @@
     {# Twitter Cards tags #}
     {% include 'includes/twitter_cards.html' %}
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    {% assets filters="less,cssmin", output="css/style.min.css", "less/site.less" %}
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
 
     {#    {% if DOCUTIL_CSS %}#}
     {#        <link href="{{ SITEURL }}/theme/css/html4css1.css" rel="stylesheet">#}
@@ -64,8 +68,8 @@
     {#    {% if TYPOGRIFY %}#}
     {#        <link href="{{ SITEURL }}/theme/css/typogrify.css" rel="stylesheet">#}
     {#    {% endif %}#}
-    <link href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/site.css" type="text/css"/>
+{#    <link href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet">#}
+{#    <link href="{{ SITEURL }}/theme/css/site.css" type="text/css" rel="stylesheet">#}
     {#    {% if CUSTOM_CSS %}#}
     {#        <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">#}
     {#    {% endif %}#}
@@ -158,13 +162,12 @@
 </div>
 {% include 'includes/footer.html' %}
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-{#<script src="//cdnjs.cloudflare.com/ajax/libs/social-likes/3.0.3/social-likes.min.js"></script>#}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
 
 
 {% include 'includes/github-js.html' %}
