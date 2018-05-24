@@ -53,6 +53,13 @@
 @import (less) "style.css";
 @import (less) "../css/pygments/native.css";
 
+a {
+	border-bottom:1px dotted;
+	&:hover {
+		border-color:blue
+	}
+}
+
 .highlight pre  {
   font-size: 8px;
   word-wrap: normal;
@@ -140,4 +147,10 @@
   position: relative;
   top: -85px;
   visibility: hidden;
+}
+
+.navbar, footer, article header h1 {
+	a {
+		border: 0;
+	}
 }

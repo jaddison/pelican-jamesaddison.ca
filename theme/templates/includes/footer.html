@@ -6,6 +6,7 @@
         </p>
         {% if SOCIAL %}
             <p>
+                <a target="_blank" href="mailto:hi@jamesaddison.ca" title="Email James Addison"><i class="fa fa-envelope-square fa-lg"></i> &nbsp;Email</a>
                 {% for name, link in SOCIAL %}
                     {% set name_sanitized = name|lower|replace('+','-plus')|replace(' ','-') %}
                     {% if name_sanitized in ['flickr', 'spotify', 'stack-overflow'] %}
@@ -13,7 +14,7 @@
                     {% else %}
                         {% set iconattributes = '"fa fa-' ~ name_sanitized ~ '-square fa-lg"' %}
                     {% endif %}
-                    {% if not loop.first %}&nbsp;-&nbsp;{% endif %} <a href="{{ link }}"><i class={{ iconattributes }}></i> &nbsp;{{ name }}</a>
+                    &nbsp;-&nbsp; <a target="_blank" href="{{ link }}"><i class={{ iconattributes }}></i> &nbsp;{{ name }}</a>
                 {% endfor %}
             </p>
         {% endif %}

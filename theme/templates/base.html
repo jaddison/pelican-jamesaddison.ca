@@ -123,6 +123,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if SOCIAL %}
                     <li class="social">
+                        <a target="_blank" href="mailto:hi@jamesaddison.ca" title="Email James Addison"><i class="fa fa-envelope-square fa-lg"></i></a>
                         {% for name, link in SOCIAL %}
                             {% set name_sanitized = name|lower|replace('+','-plus')|replace(' ','-') %}
                             {% if name_sanitized in ['flickr', 'spotify', 'stack-overflow'] %}
@@ -130,7 +131,7 @@
                             {% else %}
                                 {% set iconattributes = '"fa fa-' ~ name_sanitized ~ '-square fa-lg"' %}
                             {% endif %}
-                            <a href="{{ link }}" title="James Addison on {{ name }}"><i class={{ iconattributes }}></i></a>
+                            <a target="_blank" href="{{ link }}" title="James Addison on {{ name }}"><i class={{ iconattributes }}></i></a>
                         {% endfor %}
                     </li>
                 {% endif %}
