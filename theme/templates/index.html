@@ -3,10 +3,7 @@
 {% block canonical_rel %}<link rel="canonical" href="{{ SITEURL }}">{% endblock %}
 
 {% block content %}
-    <div class="text-muted"><em>
-        <p>Canadian living on Canada's west coast. Interested in tech, code, startups, and being awesome. Top-notch Dad, subjectively speaking.</p>
-        <p>Leading tech efforts at <a href="https://www.chatterblock.com/">ChatterBlock</a>, <a href="https://www.onewed.com/">OneWed</a>, and <a href="https://www.seafoodx.io/">SeafoodX</a>.</p>
-    </em></div>
+    {% include 'includes/me-blurb.html' %}
     <hr>
     {{ super() }}
 {% endblock %}

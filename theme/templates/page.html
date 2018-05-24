@@ -58,6 +58,8 @@
         {% endif %}
         <div class="entry-content">
             {{ page.content }}
+            <hr>
+            {% include 'includes/me-blurb.html' %}
             {% if page.comments == 'enabled' %}
                 {% include 'includes/comments.html' %}
             {% endif %}
